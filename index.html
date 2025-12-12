@@ -2,37 +2,51 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
+  <!-- Deixa o site responsivo no celular -->
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
   <title>JOGO DEMO DE SORTE OU AZAR</title>
+
+  <!-- Iconezinho do site -->
   <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- CSS principal do projeto -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="app">
+
+    <!-- Topo da página com título e HUD -->
     <header class="topbar">
       <h1>DEMO BLAZE</h1>
+
       <div class="hud">
-        <div class="badge">Saldo: <span id="balance">1000
-        </span></div>
+        <!-- Mostra o saldo do jogador -->
+        <div class="badge">Saldo: <span id="balance">1000</span></div>
+
+        <!-- Mostra o valor atual da aposta -->
         <div class="badge">Aposta: <span id="currentBet">10</span></div>
       </div>
     </header>
 
     <main class="main">
+
+      <!-- Controles do jogo -->
       <section class="controls">
+
+        <!-- Selecionar tamanho da grade -->
         <label>
           Grade
           <select id="sizeSelect">
             <option value="5">5×5</option>
             <option value="6">6×6</option>
-            
           </select>
         </label>
 
+        <!-- Selecionar número de minas -->
         <label>
           Minas
           <select id="minesSelect">
-      
             <option value="3">3</option>
             <option value="6">6</option>
             <option value="12">12</option>
@@ -40,26 +54,33 @@
           </select>
         </label>
 
+        <!-- Campo da aposta -->
         <label>
           Aposta
           <input id="betInput" type="number" min="1" value="10">
         </label>
 
+        <!-- Botões principais do jogo -->
         <button id="startBtn" class="btn primary">Nova Partida</button>
         <button id="cashoutBtn" class="btn secondary">Coletar</button>
       </section>
 
+      <!-- Área onde o tabuleiro do jogo aparece -->
       <section class="board-wrap">
+        <!-- Aqui o JS vai montar a grid -->
         <div id="board" class="grid"></div>
+
+        <!-- Log de feedback pro jogador -->
         <div id="log" class="log">Clique em "Nova Partida" para começar.</div>
       </section>
     </main>
 
     <footer class="footer">
-    
+      <!-- Deixado vazio pra caso queira algo depois -->
     </footer>
   </div>
 
+  <!-- Script principal com a lógica do jogo -->
   <script src="js/script.js"></script>
 </body>
 </html>
